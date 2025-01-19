@@ -25,26 +25,82 @@ npm run dev
 
 
 
-# Explicação Completa da Todo List em React
+# Explicação do Código do Todo List em React
 
-Este projeto é uma aplicação de lista de tarefas (Todo List) desenvolvida em React. Ele permite que o usuário adicione, visualize, marque como concluídas e exclua tarefas.
+## Componentes e Funções Principais
 
-## Estrutura do Projeto
+### `useState`
+O `useState` é um **Hook** do React usado para gerenciar o estado dentro de um componente funcional.  
+No caso do Todo List, o `useState` é utilizado para armazenar a lista de tarefas (`todos`) e atualizá-la ao longo do uso da aplicação.
 
-A aplicação é composta pelos seguintes arquivos principais:
-1. **App.jsx**: Componente principal que gerencia o estado da aplicação e renderiza a lista de tarefas e o formulário.
-2. **Todo.jsx**: Componente responsável por exibir cada tarefa individual e suas ações (completar/excluir).
-3. **TodoForm.jsx**: Formulário para adicionar novas tarefas.
+### `Todo`
+O `Todo` é um componente funcional responsável por **exibir os detalhes de cada tarefa**.  
+Ele recebe as seguintes **propriedades (props)**:  
+- `todo`: Objeto representando a tarefa, com atributos como `id`, `title`, `category` e `completed`.
+- `toggleTodo`: Função para marcar/desmarcar uma tarefa como concluída.
+- `apagarTodo`: Função para remover a tarefa.
+
+**Estrutura e Ações no Componente `Todo`:**
+- Mostra o título e a categoria da tarefa.
+- Indica se a tarefa foi completada ou não.
+- Possui dois botões:
+  - **"Completar"**: Alterna o estado de conclusão da tarefa (`toggleTodo`).
+  - **"Apagar"**: Remove a tarefa da lista (`apagarTodo`).
 
 ---
 
-## **1. App.jsx**
+### `TodoForm`
+O `TodoForm` é um componente funcional usado para **adicionar novas tarefas**.  
+Ele gerencia três estados locais:  
+- **`text`**: O texto da tarefa.
+- **`category`**: A categoria da tarefa (ex.: Frontend ou Backend).
+- **`customCategory`**: Permite ao usuário especificar uma categoria personalizada caso selecione "Outra".
 
-### Importações
-```javascript
-import { useState } from "react";
-import Todo from "./Componentes/Todo/Todo";
-import TodoForm from "./Componentes/Todo/TodoForm";
-import "./App.css";
-```
+**Funcionamento do Formulário:**
+1. O usuário insere o texto da tarefa.
+2. Escolhe uma categoria em um menu suspenso. Se selecionar "Outra", pode especificar uma categoria personalizada.
+3. Ao submeter o formulário, a função `addTodo` é chamada, adicionando a nova tarefa à lista principal.
+
+---
+
+### Relacionamento Entre os Componentes
+1. **`App.jsx`:**  
+   - Contém o estado principal da aplicação (`todos`), gerenciado com o `useState`.  
+   - Passa as funções (`addTodo`, `toggleTodo`, `apagarTodo`) para os componentes filhos (`Todo` e `TodoForm`).
+
+2. **`Todo`:**  
+   - Exibe cada tarefa individualmente com opções de completar ou apagar.
+
+3. **`TodoForm`:**  
+   - Permite criar novas tarefas, que são adicionadas ao estado principal (`todos`) gerenciado em `App.jsx`.
+
+---
+
+## Resumo das Funções no `App.jsx`
+
+- **`toggleTodo`:** Alterna o estado de conclusão de uma tarefa (de `false` para `true` ou vice-versa).
+- **`apagarTodo`:** Remove uma tarefa específica da lista principal.
+- **`addTodo`:** Adiciona uma nova tarefa à lista principal, incluindo título, categoria e estado de conclusão inicial (`false`).
+
+---
+
+## Fluxo de Uso
+
+1. A lista inicial de tarefas é renderizada pelo componente `App` e exibida como uma lista de itens `Todo`.
+2. O usuário pode:
+   - Completar uma tarefa clicando no botão "Completar".
+   - Apagar uma tarefa clicando no botão "x".
+3. Para adicionar uma nova tarefa, o usuário usa o formulário fornecido no `TodoForm`, preenchendo o título e a categoria.
+
+
+
+
+
+
+
+
+
+## 🔗 Links
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enderson-alves-6999262bb)
+
 

@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d2d4a; /* Fundo do app */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.app h1 {
+    text-align: center;
+    margin-bottom: 20px; /* Adiciona um espaçamento entre o título e o restante */
+}
+
+.todo-list {
+    width: 100%;
+    /* border: 1px solid black;*/
+} 
+
+.apagar {
+    margin-left: 3px;
+    background-color: red;
+}
+
+.actions .completar {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.actions .completar:hover {
+    background-color: #45a047;
+}
+
+.actions .apagar {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.actions .apagar:hover {
+    background-color: #e53935;
+}
+
+input, select {
+    margin: 10px 5px;
+    padding: 8px;
+    
+    border-radius: 5px; 
+    font-size: 14px;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+    font-size: 1rem;
+
+
+}
+
+input {
+    border: none;
+    width: 100% -20px;
+    border-bottom: 1px solid transparent; /* Invisível inicialmente */
+    outline: none; /* Remove o contorno azul padrão */
+    padding: 5px 10px;
+    background-color: transparent;
+    
+    color: #fff; /* Cor do texto */
+    transition: border-color 0.3s ease; /* Animação para suavidade */
+}
+input:focus {
+    border-bottom: 1px solid #4caf50; /* Cor da borda ao focar */
+}
+  
+
+button {
+    background-color: #333794;
+    color: white;
+    padding: 4px 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+
+
+.content p {
+    margin: 0;
+}
+
+.contenta {
+    background-color: #39395c;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content p {
+    margin: 0;
+    font-size: 0.9rem;
+
+}
+
+.content {
+    background-color: #39395c;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+.completado{
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+
+
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+
+
+.todo-form {
+    display: flex;
+    flex-direction: column;
+   
+    width: 100%;
+    padding: 15px;
+    background-color: #39395c;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.todo-form h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #4caf50;
+}
+
+/* Input de texto */
+.todo-form input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+ 
+    
+    outline: none;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.todo-form input[type="text"]:focus {
+    border-bottom: 1px solid #4caf50;   
+}
+
+/* Select */
+.todo-form select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2d2d4a;
+    color: #fff;
+    font-size: 0.9rem;
+    outline: none;
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Botão */
+.todo-form button {
+    margin-top: 2px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.todo-form button:hover {
+    background-color: #45a047;
+    transform: scale(1.05);
+}

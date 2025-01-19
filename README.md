@@ -1,10 +1,11 @@
 # Git e GitHub: Subir o Código para o GitHub
-##### echo "# React_Todo_List" >> README.md
-##### git commit -m "first commit"
-##### git branch -M main
-##### git remote add origin <URL>
-##### git push -u origin main
-
+```bash
+echo "# React_Todo_List" >> README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin <URL>
+git push -u origin main
+```
 
 # Instalação
 ### 1. Clone o Projeto

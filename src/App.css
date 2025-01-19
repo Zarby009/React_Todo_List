@@ -227,3 +227,13 @@ button:hover {
     background-color: #45a047;
     transform: scale(1.05);
 }
+
+.description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+    background-color: #2d2d4a;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

@@ -11,6 +11,7 @@ const TodoForm = ({ addTodo }) => {
       addTodo(text, finalCat);
       setText("");
       setCategory("");
+      setOtherCategory("");
     } else {
       alert("Porfavor, preencha todos os campos");
     }
